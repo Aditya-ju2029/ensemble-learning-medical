@@ -1,24 +1,30 @@
-# ensemble-learning-medical
-Ensemble learning with CNNs using stacking and confidence-weighted fusion
 # Ensemble Learning for Medical Image Classification
 
-This repository contains pseudocode and implementation for an ensemble learning
-framework using deep CNN models (InceptionV3, ResNet50) combined with:
+This repository provides algorithmic pseudocode and reference implementations
+for an ensemble learning framework using deep convolutional neural networks
+(InceptionV3, ResNet50, and VGG16) combined with multiple ensemble strategies.
 
-- SVM stacking
-- MLP stacking
-- Confidence-weighted inverted bell curve ensemble
+The proposed framework integrates:
+- Support Vector Machine (SVM) stacking
+- Multi-Layer Perceptron (MLP) stacking
+- Confidence-weighted inverted bell curve ensemble fusion
 
 ## Key Features
-- True 5-fold cross-validation
-- Out-of-fold probability generation
+- Transfer learning–based CNN models
+- Probability-based ensemble learning
+- True 5-fold cross-validation at the ensemble (meta-model) level
+- Out-of-fold probability usage for leak-free ensemble training
 - Macro-averaged evaluation metrics
 - Fold-wise confusion matrix analysis
 
 ## Repository Structure
-- `pseudocode/` : Algorithm-level pseudocode (journal-ready)
-- `code/`       : Python implementations
-- `results/`    : Fold-wise evaluation outputs
+- `pseudocode/` : Journal-ready, algorithm-level pseudocode
+- `code/`       : Python reference implementations
+
+## Reproducibility
+The repository includes detailed pseudocode and implementation scripts to
+ensure transparency and reproducibility. Due to data size and privacy
+constraints, datasets and trained model weights are not included.
 
 ## Note
-This repository is intended for academic and research purposes.
+This repository is intended solely for academic and research purposes.
