@@ -63,17 +63,18 @@ via GitHub.
 
 ---
 
-## Relation to Published Work
+## Relation to Associated Manuscript
 
 This repository provides a reproducible implementation of the methods
-described in:
+described in the associated manuscript:
 
-**“Weighted Deep Classifier Fusion and Soft Classifier Output Fusion for
-Kidney Disease Detection from CT Scan Images.”**
+“Weighted Deep Classifier Fusion and Soft Classifier Output Fusion for
+Kidney Disease Detection from CT Scan Images.”
 
-The implementation extends the published work by incorporating **true
-5-fold cross-validation for all ensemble (fusion) models**, providing
+The implementation extends the manuscript by incorporating true
+5-fold cross-validation for all ensemble (fusion) models, providing
 more robust and unbiased performance estimation.
+
 
 ---
 
