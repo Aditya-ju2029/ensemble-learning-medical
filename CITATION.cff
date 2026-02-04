@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software or pseudocode in your research, please cite it."
+title: "Ensemble Learning for Medical Image Classification using CNNs and Confidence-Weighted Fusion"
+authors:
+  - family-names: "Mandal"
+    given-names: "Aditya"
+version: 1.0.0
+date-released: 2026-01-01
+url: "https://github.com/Aditya-ju2029/ensemble-learning-medical"
+repository-code: "https://github.com/your-username/ensemble-learning-medical"
+license: MIT
+keywords:
+  - ensemble learning
+  - medical image classification
+  - convolutional neural networks
+  - stacking
+  - transfer learning
