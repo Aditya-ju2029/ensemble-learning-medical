@@ -1,4 +1,4 @@
-Algorithm 4: SVM-Based Stacking Ensemble with True 5-Fold Cross-Validation
+Algorithm 5: SVM-Based Stacking Ensemble with True 5-Fold Cross-Validation
 
 Input:
     - Out-of-fold probability features from base CNN models
@@ -24,3 +24,4 @@ Steps:
 
 4. Aggregate fold-wise results and report the mean ± standard deviation
    of the evaluation metrics.
+
