@@ -16,3 +16,6 @@ Steps:
        c. Inverted bell curve ensemble
 4. Perform true 5-fold evaluation.
 5. Report mean ± standard deviation of results.
+
+The framework is modular and allows independent replacement
+of base models or ensemble strategies.
