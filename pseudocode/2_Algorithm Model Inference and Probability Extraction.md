@@ -43,10 +43,8 @@ Steps:
 
 
 4\. Perform model inference without updating model parameters:
-
-    a. Generate class probability predictions for all test samples.
-    
-    b. Compute predicted class labels by selecting the class with
+      a. Generate class probability predictions for all test samples.
+      b. Compute predicted class labels by selecting the class with
        maximum probability.
 
 
@@ -80,6 +78,7 @@ Steps:
 Note:
 Inference is performed using trained base models on a held-out test set
 or designated evaluation data.
+
 
 
 
