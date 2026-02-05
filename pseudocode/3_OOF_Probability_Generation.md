@@ -1,40 +1,41 @@
-Algorithm 3: Out-of-Fold (OOF) Probability Usage for Ensemble Learning
+## Algorithm 3: Out-of-Fold (OOF) Probability Usage for Ensemble Learning
 
-Input:
-    - Probability prediction CSV files generated from trained base CNN models
-    - True class labels for all samples
-    - Number of folds K for ensemble-level cross-validation
+### Input
+- Probability prediction CSV files generated from trained base CNN models  
+- True class labels for all samples  
+- Number of folds \( K \) for ensemble-level cross-validation  
 
-Output:
-    - Fold-wise training and validation splits of probability features
-    - Out-of-fold predictions for ensemble meta-models
+### Output
+- Fold-wise training and validation splits of probability features  
+- Out-of-fold (OOF) predictions for ensemble meta-models  
 
-Steps:
-1. Load probability prediction files produced by base CNN models:
-       - Each file contains sample identifiers, true labels,
-         and class probability scores.
-       - No retraining of CNN models is performed at this stage.
+### Steps
 
-2. Construct a feature matrix P by concatenating probability vectors
-   from all base models for each sample.
+1. Load probability prediction files produced by the base CNN models:  
+   a. Each file contains sample identifiers, true labels, and class
+      probability scores.  
+   b. No retraining of CNN models is performed at this stage.  
 
-3. Initialize K-fold cross-validation at the ensemble level.
+2. Construct a probability-based feature matrix \( P \) by concatenating
+   probability vectors from all base models for each sample.  
 
-4. For each fold k = 1 to K:
-       a. Split probability feature matrix P and label vector Y into:
-            - Training subset (K−1 folds)
-            - Validation subset (1 fold)
+3. Initialize \( K \)-fold cross-validation at the ensemble (meta-model) level.  
 
-       b. Train the ensemble meta-model using only the training subset.
+4. For each fold \( k = 1 \) to \( K \):  
+   a. Split the probability feature matrix \( P \) and label vector \( Y \) into:  
+      - Training subset consisting of \( K - 1 \) folds  
+      - Validation subset consisting of 1 fold  
 
-       c. Generate predictions for the validation subset.
+   b. Train the ensemble meta-model using **only** the training subset.  
 
-       d. Store predictions as out-of-fold (OOF) predictions for fold k.
+   c. Generate predictions for the validation subset.  
 
-5. Repeat Step 4 until all folds have been processed and each sample
-   has been used exactly once for validation at the ensemble level.
+   d. Store the predictions as out-of-fold (OOF) predictions for fold \( k \).  
 
-6. Aggregate fold-wise predictions to compute evaluation metrics
-   such as Accuracy, Precision, Recall, and F1-score.
+5. Repeat Step 4 until all folds have been processed and each sample has
+   been used exactly once as validation data at the ensemble level.  
 
-End Algorithm
+6. Aggregate fold-wise OOF predictions to compute evaluation metrics such as
+   Accuracy, Precision, Recall, and F1-score.  
+
+**End Algorithm**
